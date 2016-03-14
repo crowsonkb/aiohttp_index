@@ -1,9 +1,8 @@
 aiohttp\_index
 ==============
 
-| `aiohttp.web <http://aiohttp.readthedocs.org/en/stable/>`__ middleware
-  to serve index files
-| (e.g. index.html) when static directories are requested.
+`aiohttp.web <http://aiohttp.readthedocs.org/en/stable/>`__ middleware to
+serve index files (e.g. index.html) when static directories are requested.
 
 Usage
 -----
