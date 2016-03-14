@@ -9,9 +9,10 @@ def IndexMiddleware(index='index.html'):
     Usage:
     ::
 
-       from aiohttp_index import IndexMiddleware
-       app = web.Application(middlewares=[IndexMiddleware()])
-       app.router.add_static('/', 'static')
+        from aiohttp import web
+        from aiohttp_index import IndexMiddleware
+        app = web.Application(middlewares=[IndexMiddleware()])
+        app.router.add_static('/', 'static')
 
     ``app`` will now serve ``static/index.html`` when ``/`` is requested.
 
