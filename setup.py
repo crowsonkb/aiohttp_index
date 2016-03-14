@@ -6,9 +6,9 @@ here = Path(__file__).parent
 
 setuptools.setup(
     name='aiohttp-index',
-    version='0.1.dev0',
+    version='0.1',
     description='aiohttp.web middleware to serve index files (e.g. index.html) when static directories are requested.',
-    long_description=(here / 'README.rst').read_text(),
+    long_description=open(str(here / 'README.rst')).read(),
     url='https://github.com/crowsonkb/aiohttp_index',
     author='Katherine Crowson',
     author_email='crowsonkb@gmail.com',
