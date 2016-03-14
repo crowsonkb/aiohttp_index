@@ -1,11 +1,4 @@
-"""Middleware to serve index files (e.g. index.html) when static directories are requested.
-
-Usage:
-::
-
-   app = web.Application(middlewares=[IndexMiddleware()])
-
-"""
+"""Middleware to serve index files (e.g. index.html) when static directories are requested."""
 
 __all__ = ['IndexMiddleware']
 
@@ -16,7 +9,11 @@ def IndexMiddleware(index='index.html'):
     Usage:
     ::
 
+       from aiohttp_index import IndexMiddleware
        app = web.Application(middlewares=[IndexMiddleware()])
+       app.router.add_static('/', 'static')
+
+    ``app`` will now serve ``static/index.html`` when ``/`` is requested.
 
     :param str index: The name of a directory's index file.
     :returns: The middleware factory.
